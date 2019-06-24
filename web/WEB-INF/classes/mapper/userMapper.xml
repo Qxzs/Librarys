@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.userMapper">
+
+    <!--查找所有用户-->
+
+    <select id="findAllUsers" resultType="po.users">
+        select * from  users where statue = 1;
+    </select>
+    <select id="findUserById" parameterType="int" resultType="po.users">
+        select * from users where id = #{id}
+    </select>
+
+    <!--更新用户信息-->
+    <update id="updateUsers" parameterType="po.users">
+        update users set username = '${username}',pwd = '${pwd}',sex = '${sex}',classs = '${classs}',tel = '${tel}'where id ='${id}'
+    </update>
+
+    <!--添加用户-->
+    <insert id="insertUsers" parameterType="po.users">
+        INSERT into users(username,pwd,sex,tel,classs,statue) VALUES('${username}','${pwd}','${sex}','${tel}','${classs}','${statue}')
+    </insert>
+
+    <!--删除用户-->
+    <delete id="delUsers" parameterType="int">
+        delete from users where id = #{id}
+    </delete>
+
+    <select id="selectCounts" resultType="int">
+   select count(*) from users where statue = 1
+</select>
+
+    <select id="findByPages" parameterType="Map" resultType="po.users">
+        select * from users where statue = 1
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+    <select id="findUserByName" parameterType="po.users" resultType="po.users">
+        select * FROM users WHERE username LIKE concat('%',#{username},'%')
+    </select>
+
+    <update id="updateDefine" parameterType="po.users">
+        update  users set statue = 0 where id ='${id}'
+    </update>
+</mapper>

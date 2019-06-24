@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+#usershow{
+    width: 1400px;
+    height: 500px;
+    background-color: pink;
+}
+#usershow .name{
+    float:right;
+    margin-right: 385px;
+}
+#usershow a{
+    margin-right: -650px;
+    margin-left:690px;
+}
+#findbook p{
+    position: relative;
+    top: 35px;
+}
+#findbook{
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    background-color:white;
+    position: absolute;
+    top: 80px;
+    left: 35%;
+    border-radius:10px;
+    opacity: 0.8;
+}
+#findbook input[type="text"]{
+    margin-left: 20px;
+    position: relative;
+    top: 50px;
+    width: 180px;
+    height: 30px;
+    outline: none;
+    border-radius:10px ;
+}
+#findbook span input[type="radio"]{
+    margin-top:60px;
+    margin-left: 10px;
+}
+#findbook input[type="button"]{
+    background-color: deepskyblue;
+    width: 80px;
+    height:30px;
+    margin-left:0px;
+    border: 0;
+    border-radius: 5px;
+}
+#tab1{
+    margin: 0 auto;
+    margin-left: 40px;
+}

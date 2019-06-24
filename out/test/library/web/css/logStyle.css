@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	outline:none;
+}
+#login{
+	width: 100%;
+	height: 900px;
+	margin: 0 auto;
+	background-color: lightblue;
+	
+	
+}
+#login .log{
+	width: 400px;
+	height: 350px;
+	opacity:0.9;
+	background-color:deepskyblue;
+	position: absolute;
+	top: 150px;
+	right:50px;
+}
+.log h3{
+	margin-top: 10px;
+}
+.log span{
+	margin-left: 90px;
+}
+.log input[type="text"],.log input[type = "password"]{
+	width: 170px;
+	height: 25px;
+	border: 0;
+	border-radius: 10px;
+}
+.log input[type="radio"]{
+	margin-left: 90px;
+}
+.log input[type="button"]{
+	width: 80px;
+	height: 30px;
+	margin-left: 160px;
+	background-color: blue;
+	border-radius: 5px;
+	border: 0;
+}
